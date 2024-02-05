@@ -29,7 +29,8 @@ print("\n\n")
 
 print("Q1 What is the highest rated movie in the dataset?")
 high_rate_all=df["Rating"].max()
-print(f"The highest rated movie is {high_rate_all}.")
+high_movie=df.loc[df["Rating"]==(high_rate_all),"Title"]
+print(f"The highest rated movie is {list(high_movie)} with a score of {high_rate_all}.")
 print("\n")
 
 print("Q2 What is the average revenue of all movies in the dataset?")
